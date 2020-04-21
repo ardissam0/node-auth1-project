@@ -11,7 +11,7 @@ const server = express();
 
 const sessionConfig = {
   name: "session",
-  secret: process.env.SESSION_SECRET || "this is a secret",
+  secret: process.env.SESSION_SECRET || "Secrets",
   resave: false,
   saveUninitialized: process.env.SEND_COOKIES || true,
   cookie: {
