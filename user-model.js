@@ -7,6 +7,7 @@ module.exports = {
   findById,
 };
 
+//methods for router
 function find() {
   return db("users").select("id", "username", "password");
 }

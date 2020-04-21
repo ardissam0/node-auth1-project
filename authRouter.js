@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 
 const Users = require('./user-model');
 
+//register user
 router.post("/register", (req, res) => {
     let user = req.body;
     const rounds = process.env.HASH_ROUNDS || 14;
@@ -18,6 +19,7 @@ router.post("/register", (req, res) => {
     })
 })
 
+//login with user info
 router.post("/login", (req, res) => {
     let { username, password } = req.body;
     Users.findBy({ username })

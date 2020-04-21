@@ -9,6 +9,7 @@ const authenticator = require("./authenticator");
 
 const server = express();
 
+//use sessions and cookies
 const sessionConfig = {
   name: "session",
   secret: process.env.SESSION_SECRET || "Secrets",
